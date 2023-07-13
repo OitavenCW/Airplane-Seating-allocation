@@ -1,6 +1,8 @@
 # Ariplane-Seating-allocation
 
-This Go program reads a seating arrangement file and tries to find suitable seats for a given family size. The program attempts to seat the entire family together in adjacent seats or in the same row if possible. If there are not enough available seats in a row, the family members will be divided into multiple groups to accommodate as many family members together as possible.
+This Go program runs using Cobra, a popular Go library for creating command-line applications.
+
+It reads a seating arrangement file and tries to find suitable seats for a given family size. The program attempts to seat the entire family together in adjacent seats or in the same row if possible. If there are not enough available seats in a row, the family members will be divided into multiple groups to accommodate as many family members together as possible.
 
 
 ## Usage
@@ -13,7 +15,13 @@ Download or clone the project.
 Compile and run the program using the following command:
 
 ```sh
-go run main.go <filename> <family_size>
+go build .
+
+./Airplane-Seating-Allocation seating -n <filename> -s <family_size>
+
+or
+
+go run main.go seating -n <filename> -s <family_size>
 ```
 
 Replace <filename> with the path to the seating arrangement file, and <family_size> with a positive whole number of family members you want to seat.
@@ -28,6 +36,7 @@ Example of a seating arrangement file (seating.txt):
 DXD DXD DDD
 XXX DXX DDX
 XDD XDD XDX
+...
 ```
 
 ## Output
